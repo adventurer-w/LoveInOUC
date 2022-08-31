@@ -64,9 +64,11 @@
 
 #### 3.3.1 使用RecyclerView 并搭配 Adapter设计模式
 
-**使用RecyclerView实现列表的动态加载，支持不同item动态切换、并实现了Adapter的嵌套。首页动态列表，轮播图，粉丝列表，收藏列表，评论区等都使用到了RecyclerView。**
+##### RecyclerView
 
-<img src="https://s3.bmp.ovh/imgs/2022/08/31/c1e54e814ae6234a.png" style="zoom:40%;" />
+RecyclerView 是一个类似ListView一样的列表控件，但是功能更加强大，也支持横向滚动、瀑布滚动等，而且在子项点击事件上的处理更出色。
+
+**使用RecyclerView实现列表的动态加载，项目实现不同item动态切换、并实现了Adapter的嵌套。首页动态列表，轮播图，粉丝列表，收藏列表，评论区等都使用到了RecyclerView。**
 
 
 
@@ -76,13 +78,11 @@ Adapter（适配器）模式把一个类的接口变换成客户端所期待的�
 
 适配器模式有以下角色：
 
-1. Target（目标），这就是所期待得到的接口。
-2. Adaptee（源），现有需要适配的接口。
-3. Adapter（适配器），适配器类是本模式的核心。适配器把Adaptee转换成Target。
+1. Target（目标），这就是所期待得到的接口
+2. Adaptee（源），现有需要适配的接口
+3. Adapter（适配器），适配器类是本模式的核心。适配器把Adaptee转换成Target
 
-##### RecyclerView
-
-RecyclerView 是一个类似ListView一样的列表控件，但是功能更加强大，也支持横向滚动、瀑布滚动等，而且在子项点击事件上的处理更出色。
+<img src="https://s3.bmp.ovh/imgs/2022/08/31/c1e54e814ae6234a.png" style="zoom:40%;" />
 
 
 
@@ -200,7 +200,13 @@ APP运行过程中会产生状态和属性数据（如：是否登录，用户to
 
 
 
-#### 3.3.7 正则表达式
+#### 3.3.8 人脸分析
+
+使用旷视Face++ 人工智能开放平台提供的 人脸分析 API，[Face⁺⁺ - 文档中心 (faceplusplus.com.cn)](https://console.faceplusplus.com.cn/documents/4888383)。
+
+
+
+#### 3.3.8 正则表达式
 
 在注册的过程中，用户输入的账号、密码、邮箱等需要满足一下要求：
 
@@ -211,12 +217,6 @@ APP运行过程中会产生状态和属性数据（如：是否登录，用户to
 因此，对它们格式的限制使用了正则表达式：
 
 <img src="https://i.bmp.ovh/imgs/2022/08/31/bacaa614ceebc3a0.png" style="zoom:50%;" />
-
-
-
-#### 3.3.8 人脸分析
-
-使用旷视Face++ 人工智能开放平台提供的 人脸分析 API，[Face⁺⁺ - 文档中心 (faceplusplus.com.cn)](https://console.faceplusplus.com.cn/documents/4888383)。
 
 
 
@@ -248,7 +248,7 @@ APP运行过程中会产生状态和属性数据（如：是否登录，用户to
 
 ### 5.1 写代码过程中出现各种各样的BUG
 
-一定要掌握一下三种DeBug方法！！
+一定要掌握这三种DeBug方法！！
 
 #### 5.1.2  掌握Debug模式
 
@@ -266,10 +266,49 @@ APP运行过程中会产生状态和属性数据（如：是否登录，用户to
 
 
 
+### 5.2  相机和相册使用时报错
+
+原因：需要申请储存、读取、访问相机等限权，并且不同版本的安卓系统获取限权的写法不同
+
+解决方法：上网查找相应代码与方法
+
+#### 5.2.1 在Manifest中添加权限
+
+- READ_EXTERNAL_STORAGE 读取外部存储空间
+- WRITE_EXTERNAL_STORAGE 写入外部存储空间
+- CAMERA 相机权限
+
+```xml
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.CAMERA"/>
+```
+
+#### 5.2.2 在代码中动态获取限权
+
+```java
+private void askPermission(){
+        boolean sSRPR=ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)|
+                ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)|
+                ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA);
+        Log.e("msg",Boolean.toString(sSRPR));
+        if(sSRPR){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.CAMERA
+            },0);
+        }
+
+    }
+
+```
+
 ## 6 心得体会
 
 大一的时候学过一段时间安卓APP，这次「海缘」算是重温了一遍安卓开发。大一学习的时候，对HTTP请求、try catch机制、继承与重写等知识都不甚了解，只会依葫芦画瓢。如今掌握了更多的面向对象编程知识后，再进行安卓APP的编写，思路更加清晰，也更注重代码的低耦合性。
 
-「海缘」这个项目基本实现了 市面上同类APP的功能，但如果真的所上线给所有同学运行，那也是非常困难的。且不论iOS用户无法使用，安卓的生态是十分混乱的，在不同版本的系统、不同品牌的手机上运行都可能会出现各种各样的问题，此外还要考虑服务器负载等问题。
+「海缘」这个表白交友平台，基本实现了 市面上同类APP的基础功能，但如果真的所上线给所有同学运行，那也是非常困难的。且不论iOS用户无法使用，安卓的生态是十分混乱的，在不同版本的系统、不同品牌的手机上运行都可能会出现各种各样的问题，此外还要考虑服务器费用等问题。
 
  

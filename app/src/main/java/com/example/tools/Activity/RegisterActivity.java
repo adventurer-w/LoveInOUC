@@ -202,12 +202,13 @@ public class RegisterActivity extends AppCompatActivity {
                                         JSONObject jsonObject1 = new JSONObject(responseData);
                                         int code = jsonObject1.getInt("code");
                                         final String msg = jsonObject1.getString("msg");
-                                        if (code != 200) {
+                                        if (code == 200) {
                                             RegisterActivity.this.runOnUiThread(new Runnable() {
                                                 @Override
                                                 public void run() {
                                                     Toast.makeText(RegisterActivity.this, msg, Toast.LENGTH_SHORT).show();
                                                 }
+
                                             });
                                         } else {
                                             RegisterActivity.this.runOnUiThread(new Runnable() {
