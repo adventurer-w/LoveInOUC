@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/mypaper_nonet"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/nonet">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/nofound"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/nonet"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/paper_nofound">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nofound"
+            android:layout_centerHorizontal="true"
+            android:text="网络好像走丢了"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/grey">
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

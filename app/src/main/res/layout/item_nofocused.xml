@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+<com.example.tools.tools.SquareLayout
+    android:id="@+id/no_focused_ing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="54dp"
+    android:background="@drawable/nofocus"/>
+    <TextView
+        android:id="@+id/no_focused"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="暂无关注"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+
+
+
+</LinearLayout>

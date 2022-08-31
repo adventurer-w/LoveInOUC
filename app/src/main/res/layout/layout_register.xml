@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Activity.LoginActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/background_box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="18dp"
+                app:srcCompat="@drawable/ic_baseline_chevron_left_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:letterSpacing="0.3"
+                android:text="注册"
+                android:textColor="#363636"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginEnd="21dp"
+                android:background="@drawable/gradient" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edittextbox"
+                android:hint="请输入用户名"
+                android:inputType="textPersonName"
+                android:maxLength="12"
+                android:padding="12dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/passwordone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edittextbox"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:padding="12dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/passowrdtwo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edittextbox"
+                android:hint="请确认密码"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:padding="12dp"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edittextbox"
+                android:hint="请输入邮箱账号"
+                android:inputType="textEmailAddress"
+                android:maxLength="24"
+                android:padding="12dp"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edittextbox"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/verify"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:padding="12dp"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/getverify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginVertical="6dp"
+                    android:layout_marginEnd="9dp"
+                    android:background="@drawable/buttonbox"
+                    android:text="获取验证码"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/gogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/buttonbox"
+                android:letterSpacing="0.3"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

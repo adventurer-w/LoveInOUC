@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.NewsDetailsActivity">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+    android:id="@+id/comment_srl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/details_recycler"
+            android:nestedScrollingEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D8D8D8"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+
+        <TextView
+            android:id="@+id/like_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12333"
+            android:textSize="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="6dp"
+            android:maxLength="4"
+            android:layout_alignParentBottom="true">
+
+        </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/news_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12sp"
+            android:background="@drawable/back"/>
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/button_focus"
+            android:layout_marginVertical="9dp"
+            android:layout_marginStart="24dp"
+            android:hint="说点什么吧…"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:padding="6dp"/>
+
+        <Button
+            android:id="@+id/news_collection"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12sp"
+            android:background="@drawable/collection_nor"
+           />
+        <Button
+            android:id="@+id/news_like"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="12dp"
+            android:background="@drawable/like_nor"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+    </RelativeLayout>
+</LinearLayout>

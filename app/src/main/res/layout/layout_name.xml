@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="25dp"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:hint="最多6个字符"
+        android:textSize="15dp"
+        android:singleLine="true"
+        android:paddingLeft="15dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/white_circle"
+        android:layout_height="60dp"
+        android:maxLength = "6"
+        android:id="@+id/name"/>
+
+</LinearLayout>

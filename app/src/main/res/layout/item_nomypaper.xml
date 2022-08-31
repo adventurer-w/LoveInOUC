@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="您还没有发布过动态哦"
+            android:textSize="20dp"
+            android:textStyle="bold">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/indicate"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/indicate"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/indicate"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="点击上方按钮发布动态">
+
+        </TextView>
+
+    </RelativeLayout>
+</LinearLayout>

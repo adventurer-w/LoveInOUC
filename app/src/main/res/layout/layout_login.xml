@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RegisterActivity"
+    android:background="@drawable/gradient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="39dp"
+        android:layout_marginHorizontal="22dp"
+        android:background="@drawable/background_box"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="27dp"
+            android:textSize="24sp"
+            android:letterSpacing="0.3"
+            android:text="登录"
+            android:textStyle="bold"
+            android:textColor="#363636"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@drawable/gradient"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="21dp"/>
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edittextbox"
+            android:hint="请输入用户名"
+            android:inputType="textPersonName"
+            android:maxLength="12"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edittextbox"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/gogo"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/buttonbox"
+            android:letterSpacing="0.3"
+            android:text="登录"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/signin_change_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="找回密码" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="22dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/gradient"/>
+
+            <TextView
+                android:id="@+id/login_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="注册账号"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

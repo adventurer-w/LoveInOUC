@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WriteActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F2F2">
+        <RelativeLayout
+            android:id="@+id/write_up"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/write_topBar">
+                <ImageView
+                    android:id="@+id/edit_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/back"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp">
+                </ImageView>
+                <Button
+                    android:id="@+id/edit_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="发 布"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/blue_circle"/>
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <ScrollView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F2F2F2">
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="请输入标题"
+                android:maxLength="20"
+                android:lines="1"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/edit_tagBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/edit_title">
+
+                <Button
+                    android:id="@+id/edit_tag"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/white_circle"
+                    android:text="选择动态类型"></Button>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/white_circle"
+                android:gravity="left"
+                android:hint="输入动态内容"
+                android:maxLines="15"
+                android:minLines="10"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"></EditText>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/edit_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edit_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
