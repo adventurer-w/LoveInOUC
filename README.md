@@ -8,9 +8,7 @@
 
 **后端使用 [*召](https://github.com/ruaabbit) 同学曾经写的一个新闻资讯平台的后台 ~~~**
 
-[项目地址]()
-
-
+[项目地址(github.com)](https://github.com/adventurer-w/LoveInOUC)
 
 ## 2 当前完成情况
 
